@@ -1,16 +1,84 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro"
+// const pageTitle = "BLOGTITLE"
+const pageTitle = "SYABLOG"
+import { Image } from 'astro:assets';
+import BlogListItem from '../components/BlogListItem.astro'
+import dummyImage from '../images/dummyImage1Origin.webp'
+import dummyImageSquare from '../images/dummyImageSquare.webp'
 ---
+<BaseLayout pageTitle={pageTitle}>
+  <!-- メインセクション -->
+	<main>
+		<div>
+			<!-- ここに記事一覧 -->
+			<!-- 横長表示なら左に配置する -->
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+			<!-- メイン記事 -->
+      <div>
+        <article class="main-article">
+          <!-- 内容(記事タイトル・画像など)はarticleに -->
+          <!-- marginとか聞かせたいなら外側にdivとかを付ける -->
+
+          <div class="main-article-image-wrapper">
+            <!-- 703x396 -->
+            <!-- 703∶396 -->
+            <!-- 1600x700 -->
+            <!-- 16:7 -->
+            <!-- 1280x720 -->
+            <Image
+              src={dummyImage}
+              alt="blog-cover-image"
+            />  
+          </div>
+          <h2 class="main-article-title">メイン記事タイトル</h2>
+          <p class="main-article-up-date">更新:XXXX/XX/XX</p>
+        </article>        
+      </div>
+
+
+			<!-- メインメニュー -->
+
+      <!-- 記事一覧 -->
+      <div>
+        <h2 class="latest-update-heading">記事一覧</h2>
+        <ul>
+          <!-- あとで繰り返し処理 -->
+          <BlogListItem ListImages={dummyImage} />
+          <BlogListItem ListImages={dummyImage} />
+          <BlogListItem ListImages={dummyImage} />
+          <BlogListItem ListImages={dummyImage} />
+        </ul>
+        <div>
+          <!-- ここにページのリンクを入れる -->
+          <p>1 2 3 4 5 6</p>
+        </div>
+      </div>
+
+		</div>
+
+		<!-- サブセクション -->
+		<div id="sub-section">
+			<!-- ここにプロフィールやカテゴリ・タグ一覧 -->
+			<!-- 横長表示なら右に配置する -->
+      <div class="profile-wraper">
+        <h4 class="profile-heading">Profile</h4>
+        <div class="profile-content">
+          <div class="profile-image-wrapper">
+            <Image
+              src={dummyImageSquare}
+              alt="profile-image"
+            />
+          </div>
+          <div class="profile-description-wrapper">
+            <h5>syab-syab</h5>
+            <!-- <p>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p> -->
+          </div>
+        </div>
+
+        
+      </div>
+		</div>
+	</main>
+</BaseLayout>
+
