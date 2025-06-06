@@ -98,7 +98,7 @@ ul {
 }
 
 /* --- sub プロフィール --- */
-.profile-wraper {
+/* .profile-wraper {
   border:#371C10 1px solid;
 }
 
@@ -110,10 +110,11 @@ ul {
 
 .profile-content {
   display: flex;
+  padding: 20px;
 }
 
 .profile-image-wrapper {
-  flex-grow: 3;
+  flex-grow: 1;
   width: 30%;
 }
 
@@ -123,10 +124,10 @@ ul {
 }
 
 .profile-description-wrapper {
-  flex-grow: 7;
+  flex-grow: 9;
   text-align: left;
   padding-left: 20px;
-}
+} */
 
 /* ----- footer ----- */
 footer {
