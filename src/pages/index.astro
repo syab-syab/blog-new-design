@@ -5,6 +5,8 @@ const pageTitle = "SYABLOG"
 import { Image } from 'astro:assets';
 import BlogListItem from '../components/BlogListItem.astro'
 import ProfileSection from "../components/ProfileSection.astro";
+import CategorySection from "../components/CategorySection.astro"
+import TagSection from "../components/TagSection.astro"
 import dummyImage from '../images/dummyImage1Origin.webp'
 import dummyImageSquare from '../images/dummyImageSquare.webp'
 ---
@@ -63,6 +65,8 @@ import dummyImageSquare from '../images/dummyImageSquare.webp'
 			<!-- ここにプロフィールやカテゴリ・タグ一覧 -->
 			<!-- 横長表示なら右に配置する -->
       <ProfileSection ImageSrc={dummyImageSquare} />
+      <CategorySection />
+      <TagSection />
 		</div>
 	</main>
 </BaseLayout>
