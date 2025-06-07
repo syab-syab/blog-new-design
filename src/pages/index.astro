@@ -19,24 +19,7 @@ import dummyImageSquare from '../images/dummyImageSquare.webp'
 
 			<!-- メイン記事 -->
       <div>
-        <article class="main-article">
-          <!-- 内容(記事タイトル・画像など)はarticleに -->
-          <!-- marginとか聞かせたいなら外側にdivとかを付ける -->
-
-          <div class="main-article-image-wrapper">
-            <!-- 703x396 -->
-            <!-- 703∶396 -->
-            <!-- 1600x700 -->
-            <!-- 16:7 -->
-            <!-- 1280x720 -->
-            <Image
-              src={dummyImage}
-              alt="blog-cover-image"
-            />  
-          </div>
-          <h2 class="main-article-title">メイン記事タイトル</h2>
-          <p class="main-article-up-date">更新:XXXX/XX/XX</p>
-        </article>        
+        <BlogListItem ListImages={dummyImage} ContentsTitle="最新記事タイトル" />
       </div>
 
 
@@ -45,13 +28,13 @@ import dummyImageSquare from '../images/dummyImageSquare.webp'
       <!-- 記事一覧 -->
       <div>
         <h2 class="latest-update-heading">記事一覧</h2>
-        <ul>
-          <!-- あとで繰り返し処理 -->
-          <BlogListItem ListImages={dummyImage} />
-          <BlogListItem ListImages={dummyImage} />
-          <BlogListItem ListImages={dummyImage} />
-          <BlogListItem ListImages={dummyImage} />
-        </ul>
+          <div class="blog-list-item-wrapper">
+            <!-- あとで繰り返し処理 -->
+            <BlogListItem ListImages={dummyImage} ContentsTitle="記事タイトル" />
+            <BlogListItem ListImages={dummyImage} ContentsTitle="記事タイトル" />
+            <BlogListItem ListImages={dummyImage} ContentsTitle="記事タイトル" />
+            <BlogListItem ListImages={dummyImage} ContentsTitle="記事タイトル" />          
+          </div>
         <div>
           <!-- ここにページのリンクを入れる -->
           <p>1 2 3 4 5 6</p>

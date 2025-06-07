@@ -1,56 +1,51 @@
 ---
 const { ListImages } = Astro.props
+const { ContentsTitle } = Astro.props
 import { Image } from 'astro:assets';
 ---
-<!-- スタイルを変えた方が良いかも -->
-<!-- 少なくとも縦長だとメイン記事のスタイルの方が見やすい -->
-<li>
-  <!-- 309x204 -->
-    <!-- 618x408 -->
-    <!-- 103:68 -->
-  <article class="line-up-articles">
-    <div class="line-up-articles-image-wrapper">
+<div class="main-article-wrapper">
+  <article class="main-article">
+    <!-- 内容(記事タイトル・画像など)はarticleに -->
+    <!-- marginとか聞かせたいなら外側にdivとかを付ける -->
+
+    <div class="main-article-image-wrapper">
+      <!-- 703x396 -->
+      <!-- 703∶396 -->
+      <!-- 1600x700 -->
+      <!-- 16:7 -->
+      <!-- 1280x720 -->
       <Image
         src={ListImages}
         alt="blog-cover-image"
-      />
+      />  
     </div>
-    <div class="line-up-articles-titles-wrapper">
-      <h3>記事タイトル1</h3>
-      <p>更新:XXXX/XX/XX</p>
-    </div>
-  </article>            
-</li>
+    <h2 class="main-article-title">{ ContentsTitle }</h2>
+    <p class="main-article-up-date">更新:XXXX/XX/XX</p>
+  </article>        
+</div>
 
 <style>
+/* 後でクラス名を修正する */
+.main-article-wrapper {
+  margin-bottom: 15px;
+}
 
-li {
-  height: 100px;
+.main-article {
   background-color: rgb(255, 255, 255, 0.5);
-  margin-bottom: 10px;
 }
 
-.line-up-articles {
-  display: flex;
+.main-article-title {
+  margin: 0;
+  text-align: left;
 }
 
-.line-up-articles-image-wrapper {
-  flex-grow: 3;
-  width: 30%;
+.main-article-up-date {
+  margin: 0;
+  text-align: left;
 }
 
-.line-up-articles-image-wrapper > img {
+.main-article-image-wrapper > img {
   width: 100%;
   height: 100%;
-}
-
-.line-up-articles-titles-wrapper {
-  flex-grow: 7;
-  text-align: left;
-  padding-left: 20px;
-}
-
-.line-up-articles-titles-wrapper > h3, p {
-  margin: 0 0 7px;
 }
 </style>
