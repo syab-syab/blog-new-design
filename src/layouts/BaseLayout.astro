@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css'
 const { pageTitle } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro'
 ---
 <html lang="ja">
 	<head>
@@ -11,14 +13,8 @@ const { pageTitle } = Astro.props;
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<header>
-			<h1 id="site-title">{pageTitle}</h1>
-		</header>
-
+		<Header />
     <slot />
-
-		<footer>
-			<h1>フッター部分はまだ未定</h1>
-		</footer>
+		<Footer />
 	</body>
 </html>
