@@ -13,23 +13,18 @@ import dummyImageSquare from '../images/dummyImageSquare.webp'
 <BaseLayout pageTitle={pageTitle}>
   <!-- メインセクション -->
 	<main>
+    <!-- 特定のカテゴリやタグでジャンプ -->
 		<div>
 			<!-- ここに記事一覧 -->
 			<!-- 横長表示なら左に配置する -->
 
-			<!-- メイン記事 -->
-      <div>
-        <BlogListItem ListImages={dummyImage} ContentsTitle="最新記事タイトル" />
-      </div>
-
-
-			<!-- メインメニュー -->
-
       <!-- 記事一覧 -->
       <div>
-        <h2 class="latest-update-heading">記事一覧</h2>
+        <h2 class="latest-update-heading">カテゴリ: 日記</h2>
+        <!-- タグでも可 -->
           <div class="blog-list-item-wrapper">
             <!-- あとで繰り返し処理 -->
+            <BlogListItem ListImages={dummyImage} ContentsTitle="記事タイトル" />
             <BlogListItem ListImages={dummyImage} ContentsTitle="記事タイトル" />
             <BlogListItem ListImages={dummyImage} ContentsTitle="記事タイトル" />
             <BlogListItem ListImages={dummyImage} ContentsTitle="記事タイトル" />

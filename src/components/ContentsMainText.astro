@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets'
+import dummyImage1 from '../images/dummyImage1.webp'
+import halfSizeImage from '../images/halfSizeImage.webp'
 ---
 <div class="contents-main-text-wrapper">
   <div class="contents-main-text">
@@ -6,6 +9,10 @@
       XXXXXXXXXXXXXXXX
     </h2>
     <div class="paragraph">
+      <Image
+        src={dummyImage1}
+        alt="blog-image"
+      />
       <p>
         texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
       </p>
@@ -14,6 +21,14 @@
       YYYYYYYYYYYYYYYY
     </h2>
     <div class="paragraph">
+      <p>
+        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+      </p>
+      <!-- ハーフサイズの場合思ったより大きく表示されるから後でどうにかする -->
+      <Image
+        src={halfSizeImage}
+        alt="half-size-image"
+      />
       <p>
         texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
       </p>
@@ -46,5 +61,10 @@
   .paragraph {
     word-break: break-all;
     padding: 0 20px;
+  }
+
+  .paragraph > img {
+    width: 100%;
+    height: 100%;
   }
 </style>
