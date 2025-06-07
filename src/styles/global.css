@@ -18,7 +18,7 @@ body {
   border: 1px solid #371C10;
 } */
 
-/* ---- main 記事 ---- */
+/* ---- TOPページ main 記事 ---- */
 .main-article {
   background-color: rgb(255, 255, 255, 0.5);
 }
@@ -38,9 +38,7 @@ body {
   height: 100%;
 }
 
-/* ---- main メニュー ---- */
-
-/* ---- main 記事一覧 ---- */
+/* ---- TOPページ main 記事一覧 ---- */
 
 .latest-update-heading {
   text-align: left;
@@ -51,6 +49,23 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+/* ---- BLOGページ main  ---- */
+.contents-article-wrapper {
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+
+
+.contents-article {
+
+}
+
+.contents-article-image-wrapper > img {
+  width: 100%;
+  height: 100%;
+}
+
 
 /* ---- sub section ---- */
 #sub-section {

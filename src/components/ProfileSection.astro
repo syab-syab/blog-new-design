@@ -1,6 +1,7 @@
 ---
-const { ImageSrc } = Astro.props
+// const { ImageSrc } = Astro.props
 import { Image } from 'astro:assets';
+import dummyImageSquare from '../images/dummyImageSquare.webp'
 ---
 <div class="profile-wraper">
   <h4 class="profile-heading">Profile</h4>
@@ -8,7 +9,7 @@ import { Image } from 'astro:assets';
     <div class="profile-image-name-wrapper">
       <div class="profile-image-wrapper">
         <Image
-          src={ImageSrc}
+          src={dummyImageSquare}
           alt="profile-image"
         />
       </div>

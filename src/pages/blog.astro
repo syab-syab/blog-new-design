@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+// const pageTitle = "BLOGTITLE"
+const pageTitle = "BLOGページ | SYABLOG"
+import { Image } from 'astro:assets';
+import TableOfContents from "../components/TableOfContents.astro";
+import ProfileSection from "../components/ProfileSection.astro";
+import CategorySection from "../components/CategorySection.astro"
+import TagSection from "../components/TagSection.astro"
+import dummyImage from '../images/dummyImage1Origin.webp'
+---
+<!-- コンテンツのページ -->
+<BaseLayout pageTitle={pageTitle}>
+  <!-- メインセクション -->
+	<main>
+		<div>
+			<!-- 横長表示なら左に配置する -->
+
+			
+      <div class="contents-article-wrapper">
+        <article class="contents-article">
+          <h2 class="main-article-title">メイン記事タイトル</h2>
+          <div class="contents-article-image-wrapper">
+            <Image
+              src={dummyImage}
+              alt="blog-cover-image"
+            />  
+          </div>
+          <div class="contents-attribute">
+            <p>カテゴリ: カテゴリ名</p>
+            <p>タグ: #タグ #タグ</p>
+            <p class="contents-article-up-date">更新:XXXX/XX/XX</p>            
+          </div>
+
+          <!-- 目次 -->
+          <TableOfContents />
+
+          <div class="contents-main-text-wrapper">
+            
+          </div>
+        </article>        
+      </div>
+
+
+			<!-- メインメニュー -->
+
+
+
+		<!-- サブセクション -->
+		<div id="sub-section">
+			<!-- ここにプロフィールやカテゴリ・タグ一覧 -->
+			<!-- 横長表示なら右に配置する -->
+      <ProfileSection />
+      <CategorySection />
+      <TagSection />
+		</div>
+	</main>
+</BaseLayout>
+
