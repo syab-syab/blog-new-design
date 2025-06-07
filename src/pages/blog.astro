@@ -5,6 +5,7 @@ const pageTitle = "BLOGページ | SYABLOG"
 import { Image } from 'astro:assets';
 import TableOfContents from "../components/TableOfContents.astro";
 import ProfileSection from "../components/ProfileSection.astro";
+import ContentsMainText from "../components/ContentsMainText.astro"
 import CategorySection from "../components/CategorySection.astro"
 import TagSection from "../components/TagSection.astro"
 import dummyImage from '../images/dummyImage1Origin.webp'
@@ -15,11 +16,9 @@ import dummyImage from '../images/dummyImage1Origin.webp'
 	<main>
 		<div>
 			<!-- 横長表示なら左に配置する -->
-
-			
       <div class="contents-article-wrapper">
         <article class="contents-article">
-          <h2 class="main-article-title">メイン記事タイトル</h2>
+          <h1 class="main-article-title">メイン記事タイトル</h1>
           <div class="contents-article-image-wrapper">
             <Image
               src={dummyImage}
@@ -31,21 +30,11 @@ import dummyImage from '../images/dummyImage1Origin.webp'
             <p>タグ: #タグ #タグ</p>
             <p class="contents-article-up-date">更新:XXXX/XX/XX</p>            
           </div>
-
           <!-- 目次 -->
           <TableOfContents />
-
-          <div class="contents-main-text-wrapper">
-            
-          </div>
+          <ContentsMainText />
         </article>        
       </div>
-
-
-			<!-- メインメニュー -->
-
-
-
 		<!-- サブセクション -->
 		<div id="sub-section">
 			<!-- ここにプロフィールやカテゴリ・タグ一覧 -->
