@@ -8,7 +8,6 @@ import ProfileSection from "../components/ProfileSection.astro";
 import CategorySection from "../components/CategorySection.astro"
 import TagSection from "../components/TagSection.astro"
 import dummyImage from '../images/dummyImage1.webp'
-import dummyImageSquare from '../images/dummyImageSquare.webp'
 ---
 <BaseLayout pageTitle={pageTitle}>
   <!-- メインセクション -->
@@ -16,15 +15,11 @@ import dummyImageSquare from '../images/dummyImageSquare.webp'
 		<div>
 			<!-- ここに記事一覧 -->
 			<!-- 横長表示なら左に配置する -->
-
 			<!-- メイン記事 -->
       <div>
         <BlogListItem ListImages={dummyImage} ContentsTitle="最新記事タイトル" />
       </div>
-
-
 			<!-- メインメニュー -->
-
       <!-- 記事一覧 -->
       <div>
         <h2 class="latest-update-heading">記事一覧</h2>
@@ -40,7 +35,6 @@ import dummyImageSquare from '../images/dummyImageSquare.webp'
           <p>1 2 3 4 5 6</p>
         </div>
       </div>
-
 		</div>
 
 		<!-- サブセクション -->

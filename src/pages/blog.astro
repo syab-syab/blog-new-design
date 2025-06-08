@@ -14,27 +14,27 @@ import dummyImage from '../images/dummyImage1.webp'
 <BaseLayout pageTitle={pageTitle}>
   <!-- メインセクション -->
 	<main>
-		<div>
-			<!-- 横長表示なら左に配置する -->
-      <div class="contents-article-wrapper">
-        <article class="contents-article">
-          <h1 class="main-article-title">メイン記事タイトル</h1>
-          <div class="contents-article-image-wrapper">
-            <Image
-              src={dummyImage}
-              alt="blog-cover-image"
-            />  
-          </div>
-          <div class="contents-attribute">
-            <p>カテゴリ: カテゴリ名</p>
-            <p>タグ: #タグ #タグ</p>
-            <p class="contents-article-up-date">更新:XXXX/XX/XX</p>            
-          </div>
-          <!-- 目次 -->
-          <TableOfContents />
-          <ContentsMainText />
-        </article>        
-      </div>
+    <!-- 横長表示なら左に配置する -->
+    <div class="contents-article-wrapper">
+      <article class="contents-article">
+        <h1 class="main-article-title">メイン記事タイトル</h1>
+        <div class="contents-article-image-wrapper">
+          <Image
+            src={dummyImage}
+            alt="blog-cover-image"
+          />  
+        </div>
+        <div class="contents-attribute">
+          <p>カテゴリ: カテゴリ名</p>
+          <p>タグ: #タグ #タグ</p>
+          <p class="contents-article-up-date">更新:XXXX/XX/XX</p>            
+        </div>
+        <!-- 目次 -->
+        <TableOfContents />
+        <ContentsMainText />
+      </article>        
+    </div>
+    
 		<!-- サブセクション -->
 		<div id="sub-section">
 			<!-- ここにプロフィールやカテゴリ・タグ一覧 -->
