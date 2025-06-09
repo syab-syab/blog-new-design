@@ -15,9 +15,19 @@ body {
 /* ----- main section ----- */
 main {
   display:flex;
+  padding: 0 400px 0;
   /* padding: 0 300px 0; */
-  padding: 0 200px 0;
+  /* padding: 0 200px 0; */
 }
+
+#main-section {
+  padding: 0 15px;
+}
+
+/* #main-section > .main-article-wrapper {
+  width: 50%;
+} */
+
 
 
 /* ---- TOPページ main 記事一覧 ---- */
@@ -30,6 +40,7 @@ main {
 .blog-list-item-wrapper {
   padding: 0;
 }
+
 
 /* ---- BLOGページ main  ---- */
 .contents-article-wrapper {
@@ -149,5 +160,12 @@ main {
 #sub-section {
   /* ボーダーは仮置き */
   /* border: 1px solid #371C10; */
+  padding: 0 15px;
 }
 
+@media (max-width: 800px) {
+  main {
+    display: block;
+    padding: 0 20px 0;
+  }
+}
