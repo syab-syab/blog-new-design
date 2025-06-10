@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
-// const pageTitle = "BLOGTITLE"
 const pageTitle = "BLOGページ | SYABLOG"
+const metaDescription = "ここはコンテンツ(記事)ページ"
+const metaKeywords ="記事,コンテンツページ,これはテスト"
 import { Image } from 'astro:assets';
 import TableOfContents from "../components/TableOfContents.astro";
 import ProfileSection from "../components/ProfileSection.astro";
@@ -11,7 +12,11 @@ import TagSection from "../components/TagSection.astro"
 import dummyImage from '../images/dummyImage1.webp'
 ---
 <!-- コンテンツのページ -->
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout
+  pageTitle={pageTitle}
+  metaDescription={metaDescription}
+  metaKeywords={metaKeywords}
+>
   <!-- メインセクション -->
 	<main>
     <!-- 横長表示なら左に配置する -->

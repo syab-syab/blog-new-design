@@ -1,15 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
-// const pageTitle = "BLOGTITLE"
 const pageTitle = "SYABLOG"
-import { Image } from 'astro:assets';
+const metaDescription = "ここはトップページ"
+const metaKeywords ="ブログ,トップページ,これはテスト"
 import BlogListItem from '../components/BlogListItem.astro'
 import ProfileSection from "../components/ProfileSection.astro";
 import CategorySection from "../components/CategorySection.astro"
 import TagSection from "../components/TagSection.astro"
 import dummyImage from '../images/dummyImage1.webp'
+
 ---
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout
+  pageTitle={pageTitle}
+  metaDescription={metaDescription}
+  metaKeywords={metaKeywords}
+>
   <!-- メインセクション -->
 	<main>
 		<div id="main-section">

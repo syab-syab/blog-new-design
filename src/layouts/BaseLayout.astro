@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css'
 const { pageTitle } = Astro.props;
+const { metaDescription } = Astro.props;
+const { metaKeywords } = Astro.props;
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro'
 ---
@@ -10,6 +12,8 @@ import Footer from '../components/Footer.astro'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={metaDescription}>
+		<meta name="keywords" content={metaKeywords}>
 		<title>{pageTitle}</title>
 	</head>
 	<body>
